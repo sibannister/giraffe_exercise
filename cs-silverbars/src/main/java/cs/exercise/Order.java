@@ -1,6 +1,5 @@
 package cs.exercise;
 
-import com.sun.istack.internal.NotNull;
 import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
@@ -15,7 +14,7 @@ public class Order {
     private final BigDecimal pricePerKilo;
     private final OrderType buyOrSell;
 
-    public Order(@NotNull String userId, @NotNull BigDecimal quantityKilos, @NotNull BigDecimal pricePerKilo, @NotNull OrderType buyOrSell) {
+    public Order(String userId, BigDecimal quantityKilos, BigDecimal pricePerKilo, OrderType buyOrSell) {
         if(StringUtils.isBlank(userId)) {
             throw new IllegalArgumentException("userId cannot be blank");
         }
